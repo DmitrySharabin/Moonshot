@@ -7,40 +7,28 @@
 
 import SwiftUI
 
-struct CustomText: View {
-    let text: String
-    
-    var body: some View {
-        Text(text)
-    }
-    
-    init(_ text: String) {
-        print("Creating a new CustomText")
-        self.text = text
-    }
-}
-
 struct ContentView: View {
     var body: some View {
-//        ScrollView {
-////            VStack(spacing: 10) {
-//            LazyVStack(spacing: 10) {
-//                ForEach(0..<100) {
-////                    Text("Item \($0)")
-////                        .font(.title)
-//                    CustomText("Item \($0)")
-//                        .font(.title)
-//                }
+        NavigationView {
+//            Text("Hello, world!")
+//                .padding()
+//                .navigationTitle("SwiftUI")
+            
+//            NavigationLink {
+//                Text("Detail View")
+//            } label: {
+//                Text("Hello, world!")
+//                    .padding()
 //            }
-////            .frame(maxWidth: .infinity)
-//        }
-        
-        ScrollView(.horizontal) {
-            LazyHStack(spacing: 10) {
-                ForEach(0..<100) {
-                    CustomText("Item \($0)")
-                        .font(.title)
+//            .navigationTitle("SwiftUI")
+            
+            List(0..<100) { row in
+                NavigationLink {
+                    Text("Detail \(row)")
+                } label: {
+                    Text("Row \(row)")
                 }
+                .navigationTitle("SwiftUI")
             }
         }
     }
