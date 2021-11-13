@@ -7,21 +7,41 @@
 
 import SwiftUI
 
+struct CustomText: View {
+    let text: String
+    
+    var body: some View {
+        Text(text)
+    }
+    
+    init(_ text: String) {
+        print("Creating a new CustomText")
+        self.text = text
+    }
+}
+
 struct ContentView: View {
     var body: some View {
-//        Image("Example")
-//            .resizable()
-////            .scaledToFit()
-//            .scaledToFill()
-//            .frame(width: 300, height: 300)
-////            .clipped()
-//    }
-        GeometryReader { geo in
-            Image("Example")
-                .resizable()
-                .scaledToFit()
-                .frame(width: geo.size.width * 0.8)
-                .frame(width: geo.size.width, height: geo.size.height)
+//        ScrollView {
+////            VStack(spacing: 10) {
+//            LazyVStack(spacing: 10) {
+//                ForEach(0..<100) {
+////                    Text("Item \($0)")
+////                        .font(.title)
+//                    CustomText("Item \($0)")
+//                        .font(.title)
+//                }
+//            }
+////            .frame(maxWidth: .infinity)
+//        }
+        
+        ScrollView(.horizontal) {
+            LazyHStack(spacing: 10) {
+                ForEach(0..<100) {
+                    CustomText("Item \($0)")
+                        .font(.title)
+                }
+            }
         }
     }
 }
