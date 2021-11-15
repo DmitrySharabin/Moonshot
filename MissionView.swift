@@ -59,14 +59,23 @@ struct MissionView: View {
                                     AstronautView(astronaut: crewMember.astronaut)
                                 } label: {
                                     HStack {
-                                        Image(crewMember.astronaut.id)
-                                            .resizable()
-                                            .frame(width: 104, height: 72)
-                                            .clipShape(Capsule())
-                                            .overlay(
-                                                Capsule()
-                                                    .strokeBorder(.white, lineWidth: 1)
+                                        ZStack {
+                                            Image(crewMember.astronaut.id)
+                                                .resizable()
+                                                .frame(width: 104, height: 72)
+                                                .clipShape(RoundedRectangle(cornerRadius: 15))
+                                                .overlay(
+                                                    RoundedRectangle(cornerRadius: 15)
+                                                        .strokeBorder(isCaptain(crewMember) ? .orange : .white, lineWidth: 1.5)
                                             )
+                                            
+                                            if isCaptain(crewMember) {
+                                                Text("🚀")
+                                                    .font(.title2)
+                                                    .offset(x: 46, y: -30)
+                                            }
+                                        }
+                                        .padding(.top, 10)
                                         
                                         VStack(alignment: .leading) {
                                             Text(crewMember.astronaut.name)
@@ -101,6 +110,10 @@ struct MissionView: View {
                 fatalError("Missing \(member.name).")
             }
         }
+    }
+    
+    func isCaptain(_ crewMember: CrewMember) -> Bool {
+        ["Commander", "Command Pilot"].contains(crewMember.role)
     }
 }
 
