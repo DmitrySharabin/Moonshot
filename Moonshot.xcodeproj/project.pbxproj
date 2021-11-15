@@ -18,6 +18,7 @@
 		8EBB60C62741360C003A2CF3 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBB60C52741360C003A2CF3 /* Mission.swift */; };
 		8EBB60C82741420A003A2CF3 /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBB60C72741420A003A2CF3 /* Color-Theme.swift */; };
 		8ED1C4F027424E1000C18332 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1C4EF27424E1000C18332 /* MissionView.swift */; };
+		8ED1C4F227425C4B00C18332 /* AstronautView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1C4F127425C4B00C18332 /* AstronautView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		8EBB60C52741360C003A2CF3 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		8EBB60C72741420A003A2CF3 /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
 		8ED1C4EF27424E1000C18332 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
+		8ED1C4F127425C4B00C18332 /* AstronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				8ED1C4EF27424E1000C18332 /* MissionView.swift */,
+				8ED1C4F127425C4B00C18332 /* AstronautView.swift */,
 				8EBB60C72741420A003A2CF3 /* Color-Theme.swift */,
 				8E877DE9273FB73100F7EF83 /* Moonshot */,
 				8E877DE8273FB73100F7EF83 /* Products */,
@@ -162,6 +165,7 @@
 			files = (
 				8ED1C4F027424E1000C18332 /* MissionView.swift in Sources */,
 				8EBB60C227412E83003A2CF3 /* Astronaut.swift in Sources */,
+				8ED1C4F227425C4B00C18332 /* AstronautView.swift in Sources */,
 				8EBB60C82741420A003A2CF3 /* Color-Theme.swift in Sources */,
 				8E877DED273FB73100F7EF83 /* ContentView.swift in Sources */,
 				8E877DEB273FB73100F7EF83 /* MoonshotApp.swift in Sources */,
