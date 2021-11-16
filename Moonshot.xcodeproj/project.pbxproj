@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E5D93162743D4300066420C /* MissionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D93152743D4300066420C /* MissionCardView.swift */; };
 		8E877DEB273FB73100F7EF83 /* MoonshotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E877DEA273FB73100F7EF83 /* MoonshotApp.swift */; };
 		8E877DED273FB73100F7EF83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E877DEC273FB73100F7EF83 /* ContentView.swift */; };
 		8E877DEF273FB73200F7EF83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E877DEE273FB73200F7EF83 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E5D93152743D4300066420C /* MissionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCardView.swift; sourceTree = "<group>"; };
 		8E877DE7273FB73100F7EF83 /* Moonshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E877DEA273FB73100F7EF83 /* MoonshotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotApp.swift; sourceTree = "<group>"; };
 		8E877DEC273FB73100F7EF83 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			children = (
 				8E877DEA273FB73100F7EF83 /* MoonshotApp.swift */,
 				8E877DEC273FB73100F7EF83 /* ContentView.swift */,
+				8E5D93152743D4300066420C /* MissionCardView.swift */,
 				8EBB60C127412E83003A2CF3 /* Astronaut.swift */,
 				8EBB60C52741360C003A2CF3 /* Mission.swift */,
 				8EBB60C327412EDC003A2CF3 /* Bundle-Decodable.swift */,
@@ -171,6 +174,7 @@
 				8E877DEB273FB73100F7EF83 /* MoonshotApp.swift in Sources */,
 				8EBB60C62741360C003A2CF3 /* Mission.swift in Sources */,
 				8EBB60C427412EDC003A2CF3 /* Bundle-Decodable.swift in Sources */,
+				8E5D93162743D4300066420C /* MissionCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
