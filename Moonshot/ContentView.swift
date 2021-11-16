@@ -8,30 +8,35 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showingGrid = true
+    
     let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
     let missions: [Mission] = Bundle.main.decode("missions.json")
     
-    let columns = [
-        GridItem(.adaptive(minimum: 150))
-    ]
-    
     var body: some View {
         NavigationView {
-            ScrollView {
-                LazyVGrid(columns: columns) {
-                    ForEach(missions) { mission in
-                        NavigationLink {
-                            MissionView(mission: mission, astronauts: astronauts)
-                        } label: {
-                            MissionCardView(mission: mission)
-                        }
-                    }
+            Group {
+                if showingGrid {
+                    GridLayout(missions: missions, astronauts: astronauts)
+                } else {
+                    ListLayout(missions: missions, astronauts: astronauts)
                 }
-                .padding([.horizontal, .bottom])
             }
             .navigationTitle("Moonshot")
             .background(.darkBackground)
             .preferredColorScheme(.dark)
+            .toolbar {
+                Button {
+                    showingGrid.toggle()
+                } label: {
+                    Label {
+                        Text(showingGrid ? "List view" : "Grid view")
+                    } icon: {
+                        Image(systemName: showingGrid ? "rectangle.grid.1x2" : "square.grid.2x2")
+                    }
+                    .foregroundColor(.white)
+                }
+            }
         }
     }
 }
