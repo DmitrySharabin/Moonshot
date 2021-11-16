@@ -70,7 +70,7 @@ struct MissionView: View {
             }
         }
     }
-       
+    
     struct CrewView: View {
         let crew: [CrewMember]
         
@@ -115,7 +115,7 @@ struct MissionView: View {
                         .overlay(
                             RoundedRectangle(cornerRadius: 15)
                                 .strokeBorder(isCaptain(crewMember) ? .orange : .white, lineWidth: 1.5)
-                    )
+                        )
                     
                     if isCaptain(crewMember) {
                         Text("🚀")
