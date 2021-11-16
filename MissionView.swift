@@ -16,6 +16,10 @@ struct MissionView: View {
     let mission: Mission
     let crew: [CrewMember]
     
+    var launchDate: String {
+        mission.launchDate?.formatted(date: .complete, time: .omitted) ?? "N/A"
+    }
+    
     var body: some View {
         GeometryReader { geometry in
             ScrollView {
@@ -26,9 +30,12 @@ struct MissionView: View {
                         .frame(maxWidth: geometry.size.width * 0.6)
                         .padding(.top)
                     
+                    Text(launchDate)
+                        .padding(.top)
+                        .font(.headline)
+                        .foregroundColor(.white.opacity(0.5))
                     
                     VStack(alignment: .leading) {
-//                        Divider()
                         
                         Rectangle()
                             .frame(height: 2)
