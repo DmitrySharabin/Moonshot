@@ -36,6 +36,7 @@ struct ContentView: View {
                     }
                     .foregroundColor(.white)
                 }
+                .accessibilityHidden(true)
             }
         }
     }

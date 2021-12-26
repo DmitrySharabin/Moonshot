@@ -12,7 +12,7 @@ struct MissionCardView: View {
     
     var body: some View {
         VStack {
-            Image(mission.image)
+            Image(decorative: mission.image)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 100, height: 100)
@@ -26,6 +26,7 @@ struct MissionCardView: View {
                 Text(mission.formattedLaunchDate)
                     .font(.caption)
                     .foregroundColor(.white.opacity(0.5))
+                    .accessibilityHidden(true)
             }
             .padding(.vertical)
             .frame(maxWidth: .infinity)
